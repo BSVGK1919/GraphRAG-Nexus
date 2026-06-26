@@ -5,6 +5,8 @@ All values loaded from environment variables.
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import Optional
+from pydantic import Field
+
 
 
 class Settings(BaseSettings):
@@ -31,10 +33,12 @@ class Settings(BaseSettings):
     ollama_timeout: int = 180
 
     # ── Neo4j ────────────────────────────────────────
-    neo4j_uri: str = "bolt://localhost:7687"
-    neo4j_username: str = "neo4j"
-    neo4j_password: str = ""
-    neo4j_database: str = "neo4j"
+    # ── Neo4j ────────────────────────────────────────
+    neo4j_uri: str = Field(default="bolt://localhost:7687", env="NEO4J_URI")
+    neo4j_username: str = Field(default="neo4j", env="NEO4J_USERNAME")
+    neo4j_password: str = Field(default="", env="NEO4J_PASSWORD")
+    neo4j_database: str = Field(default="neo4j", env="NEO4J_DATABASE")
+
 
     # ── FAISS ────────────────────────────────────────
     faiss_index_path: str = "data/embeddings/faiss_index"
@@ -42,9 +46,10 @@ class Settings(BaseSettings):
 
     # ── Pinecone ─────────────────────────────────────
     pinecone_api_key: str = ""
-    pinecone_index_name: str = "graphrag-nexus"
+    pinecone_index: str = "agentrag-index"
     pinecone_environment: str = "us-east-1"
     pinecone_dimension: int = 384
+    pinecone_namespace: str = "graphrag-nexus-v2"
 
     # ── Embedding Model ──────────────────────────────
     embedding_model: str = "all-MiniLM-L6-v2"
