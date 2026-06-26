@@ -33,11 +33,11 @@ class Settings(BaseSettings):
     ollama_timeout: int = 180
 
     # ── Neo4j ────────────────────────────────────────
-    # ── Neo4j ────────────────────────────────────────
-    neo4j_uri: str = Field(default="bolt://localhost:7687", env="NEO4J_URI")
-    neo4j_username: str = Field(default="neo4j", env="NEO4J_USERNAME")
-    neo4j_password: str = Field(default="", env="NEO4J_PASSWORD")
-    neo4j_database: str = Field(default="neo4j", env="NEO4J_DATABASE")
+    neo4j_uri: str = "bolt://localhost:7687"
+    neo4j_username: str = "neo4j"
+    neo4j_password: str = ""
+    neo4j_database: str = "neo4j"
+
 
 
     # ── FAISS ────────────────────────────────────────
@@ -45,11 +45,15 @@ class Settings(BaseSettings):
     faiss_dimension: int = 384
 
     # ── Pinecone ─────────────────────────────────────
+
     pinecone_api_key: str = ""
     pinecone_index: str = "agentrag-index"
     pinecone_environment: str = "us-east-1"
     pinecone_dimension: int = 384
     pinecone_namespace: str = "graphrag-nexus-v2"
+    pinecone_host: str = ""
+    use_pinecone: bool = False
+
 
     # ── Embedding Model ──────────────────────────────
     embedding_model: str = "all-MiniLM-L6-v2"
@@ -82,11 +86,13 @@ class Settings(BaseSettings):
     graph_coverage_min: float = 0.70
 
     # ── AWS ──────────────────────────────────────────
-    aws_region: str = "eu-west-2"
+    aws_region: str = "us_east_1"
     aws_s3_bucket_raw: str = "graphrag-nexus-raw"
     aws_s3_bucket_processed: str = "graphrag-nexus-processed"
     aws_s3_bucket_backups: str = "graphrag-nexus-backups"
     aws_s3_bucket_eval: str = "graphrag-nexus-eval"
+    aws_access_key_id: str = ""
+    aws_secret_access_key: str = ""
 
     # ── HuggingFace ──────────────────────────────────
     hf_token: str = ""

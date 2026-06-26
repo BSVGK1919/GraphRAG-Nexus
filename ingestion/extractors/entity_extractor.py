@@ -120,10 +120,10 @@ ML_DOMAINS = {
 }
 
 SALARY_PATTERNS = [
-    r"£(\d{2,3})[,k]?[\s-]*(?:to|-)[\s]*£?(\d{2,3})[,k]?",
-    r"\$(\d{2,3})[,k]?[\s-]*(?:to|-)[\s]*\$?(\d{2,3})[,k]?",
-    r"(\d{2,3})[,k][\s]*(?:to|-)[\s]*(\d{2,3})[,k]",
+    r"[£$](\d{2,3}),?\d{3}\s*(?:to|-)\s*[£$]?(\d{2,3}),?\d{3}",
+    r"(\d{2,3})[,k]\s*(?:to|-)\s*(\d{2,3})[,k]",
 ]
+
 
 LOCATION_PATTERNS = [
     "london", "new york", "san francisco", "seattle",
