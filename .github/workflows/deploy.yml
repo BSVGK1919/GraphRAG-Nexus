@@ -1,0 +1,98 @@
+name: GraphRAG-Nexus CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+
+  # ── CI: Test ──────────────────────────────────────
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependencies
+        run: |
+          pip install pytest pytest-asyncio
+          pip install pydantic pydantic-settings
+          pip install python-dotenv rdflib
+          pip install numpy rank-bm25
+          pip install neo4j anthropic
+          pip install langgraph langchain langchain-core
+          pip install langchain-anthropic faiss-cpu
+          pip install sentence-transformers
+
+      - name: Validate Python files
+        run: |
+          find . -name "*.py" \
+            -not -path "./.venv/*" \
+            -not -path "./__pycache__/*" \
+            | xargs python3 -c "
+          import sys, ast
+          for f in sys.argv[1:]:
+              ast.parse(open(f).read())
+          print(f'All {len(sys.argv)-1} Python files valid')
+          "
+
+      - name: Check .env not committed
+        run: |
+          if git ls-files --error-unmatch .env 2>/dev/null;
+          then
+            echo '.env is tracked by git!'
+            exit 1
+          else
+            echo '.env is not tracked ✅'
+          fi
+
+      - name: Run unit tests
+        run: |
+          python3 -m pytest tests/unit/ -v \
+            --tb=short \
+            --no-header
+        env:
+          ANTHROPIC_API_KEY: test_key
+          NEO4J_URI: bolt://localhost:7687
+          NEO4J_USERNAME: neo4j
+          NEO4J_PASSWORD: test_password
+          PINECONE_API_KEY: test_key
+          PINECONE_INDEX: test_index
+          HF_TOKEN: test_token
+          AWS_ACCESS_KEY_ID: test_key
+          AWS_SECRET_ACCESS_KEY: test_secret
+          AWS_REGION: us-east-1
+          LANGSMITH_API_KEY: test_key
+
+  # ── CD: Deploy ────────────────────────────────────
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/GraphRAG-Nexus
+            git pull origin main
+            sudo docker compose build --no-cache api
+            sudo docker compose up -d
+            sleep 30
+            curl -f http://localhost:8000/health
+            echo "✅ Deployment successful"
