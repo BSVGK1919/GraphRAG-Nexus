@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     ollama_timeout: int = 180
 
     # ── Neo4j ────────────────────────────────────────
-    neo4j_uri: str = "bolt://localhost:7687"
+    neo4j_uri: str = ""
     neo4j_username: str = "neo4j"
     neo4j_password: str = ""
     neo4j_database: str = "neo4j"

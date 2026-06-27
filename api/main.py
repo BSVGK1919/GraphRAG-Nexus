@@ -8,6 +8,7 @@ import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from typing import Optional
 from pydantic import BaseModel
 from config.settings import settings
 
@@ -64,7 +65,7 @@ class QueryResponse(BaseModel):
     graph_coverage: float
     llm_provider: str
     latency_ms: float
-    error: str = None
+    error: Optional[str] = None
 
 
 # ── Endpoints ─────────────────────────────────────────────────
@@ -101,6 +102,11 @@ async def query(request: QueryRequest):
         session_id=request.session_id
     )
 
+    result["answer"] = result.get("answer") or ""
+    result["query_type"] = result.get("query_type") or "unknown"
+    result["confidence_band"] = result.get("confidence_band") or "low"
+    result["llm_provider"] = result.get("llm_provider") or "unknown"
+    result["sources"] = result.get("sources") or []
     return QueryResponse(**result)
 
 

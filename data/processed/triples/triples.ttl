@@ -1,0 +1,1003 @@
+@prefix grn: <https://graphrag-nexus.ai/ontology#> .
+@prefix grn_data: <https://graphrag-nexus.ai/data#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+grn_data:Ai_Engineer a grn:Role ;
+    rdfs:label "Ai Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Airflow a grn:Skill,
+        grn:Tool ;
+    rdfs:label "Airflow" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Attention_Mechanism a grn:Skill ;
+    rdfs:label "Attention Mechanism" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Autonomous_Systems a grn:Domain ;
+    rdfs:label "Autonomous Systems" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Aws a grn:Entity,
+        grn:Skill ;
+    rdfs:label "Aws" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Azure a grn:Entity,
+        grn:Skill ;
+    rdfs:label "Azure" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "huggingface",
+        "jobs",
+        "static" .
+
+grn_data:Bayesian a grn:Skill ;
+    rdfs:label "Bayesian" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Bert a grn:Skill ;
+    rdfs:label "Bert" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "huggingface",
+        "jobs",
+        "static" .
+
+grn_data:Boston a grn:Location ;
+    rdfs:label "Boston" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Calculus a grn:Skill ;
+    rdfs:label "Calculus" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Catboost a grn:Skill ;
+    rdfs:label "Catboost" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Computer_Vision a grn:Domain,
+        grn:Skill ;
+    rdfs:label "Computer Vision" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Computer_Vision_Engineer a grn:Role ;
+    rdfs:label "Computer Vision Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Cv a grn:Domain ;
+    rdfs:label "Cv" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv" .
+
+grn_data:Data_Engineer a grn:Role ;
+    rdfs:label "Data Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Data_Engineering a grn:Skill ;
+    rdfs:label "Data Engineering" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Data_Pipeline a grn:Skill ;
+    rdfs:label "Data Pipeline" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Data_Scientist a grn:Role ;
+    rdfs:label "Data Scientist" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Deep_Learning a grn:Skill ;
+    rdfs:label "Deep Learning" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Docker a grn:Skill,
+        grn:Tool ;
+    rdfs:label "Docker" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "jobs",
+        "static" .
+
+grn_data:Dvc a grn:Skill ;
+    rdfs:label "Dvc" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Embeddings a grn:Skill ;
+    rdfs:label "Embeddings" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "huggingface",
+        "static" .
+
+grn_data:Faiss a grn:Skill,
+        grn:Tool ;
+    rdfs:label "Faiss" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Fine_Tuning a grn:Skill ;
+    rdfs:label "Fine-Tuning" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Gcp a grn:Entity,
+        grn:Skill ;
+    rdfs:label "Gcp" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Generative_Ai a grn:Domain,
+        grn:Skill ;
+    rdfs:label "Generative Ai" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs",
+        "static" .
+
+grn_data:Git a grn:Skill ;
+    rdfs:label "Git" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Gnn a grn:Skill ;
+    rdfs:label "Gnn" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv" .
+
+grn_data:Gpt a grn:Skill ;
+    rdfs:label "Gpt" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "huggingface",
+        "static" .
+
+grn_data:Gradient_Boosting a grn:Skill ;
+    rdfs:label "Gradient Boosting" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Graph_Neural_Network a grn:Skill ;
+    rdfs:label "Graph Neural Network" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv" .
+
+grn_data:Head_Of_Ai a grn:Role ;
+    rdfs:label "Head Of Ai" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs",
+        "static" .
+
+grn_data:Hybrid a grn:Location ;
+    rdfs:label "Hybrid" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Junior_Ml_Engineer a grn:Role ;
+    rdfs:label "Junior Ml Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Keras a grn:Framework,
+        grn:Skill ;
+    rdfs:label "Keras" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Knowledge_Graph a grn:Skill ;
+    rdfs:label "Knowledge Graph" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Kubernetes a grn:Skill,
+        grn:Tool ;
+    rdfs:label "Kubernetes" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Langchain a grn:Framework,
+        grn:Skill ;
+    rdfs:label "Langchain" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Langgraph a grn:Framework,
+        grn:Skill ;
+    rdfs:label "Langgraph" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Large_Language_Model a grn:Skill ;
+    rdfs:label "Large Language Model" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Lightgbm a grn:Library,
+        grn:Skill ;
+    rdfs:label "Lightgbm" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Linear_Algebra a grn:Skill ;
+    rdfs:label "Linear Algebra" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Llm a grn:Skill ;
+    rdfs:label "Llm" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Llm_Engineer a grn:Role ;
+    rdfs:label "Llm Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:London a grn:Location ;
+    rdfs:label "London" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Machine_Learning a grn:Skill ;
+    rdfs:label "Machine Learning" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Machine_Learning_Engineer a grn:Role ;
+    rdfs:label "Machine Learning Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs",
+        "static" .
+
+grn_data:Matplotlib a grn:Library,
+        grn:Skill ;
+    rdfs:label "Matplotlib" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Ml_Engineer a grn:Role ;
+    rdfs:label "Ml Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs",
+        "static" .
+
+grn_data:Mlflow a grn:Skill,
+        grn:Tool ;
+    rdfs:label "Mlflow" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Mlops a grn:Skill ;
+    rdfs:label "Mlops" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Mlops_Engineer a grn:Role ;
+    rdfs:label "Mlops Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Model_Deployment a grn:Skill ;
+    rdfs:label "Model Deployment" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Natural_Language_Processing a grn:Domain,
+        grn:Skill ;
+    rdfs:label "Natural Language Processing" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Neo4J a grn:Skill,
+        grn:Tool ;
+    rdfs:label "Neo4J" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Neural_Network a grn:Skill ;
+    rdfs:label "Neural Network" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:New_York a grn:Location ;
+    rdfs:label "New York" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Nlp a grn:Domain,
+        grn:Skill ;
+    rdfs:label "Nlp" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Nltk a grn:Library ;
+    rdfs:label "Nltk" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Numpy a grn:Library,
+        grn:Skill ;
+    rdfs:label "Numpy" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Ontology a grn:Skill ;
+    rdfs:label "Ontology" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv" .
+
+grn_data:Pandas a grn:Library,
+        grn:Skill ;
+    rdfs:label "Pandas" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Paris a grn:Location ;
+    rdfs:label "Paris" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "arxiv" .
+
+grn_data:Pinecone a grn:Skill,
+        grn:Tool ;
+    rdfs:label "Pinecone" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Principal_Ml_Engineer a grn:Role ;
+    rdfs:label "Principal Ml Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Probability a grn:Skill ;
+    rdfs:label "Probability" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Prompt_Engineering a grn:Skill ;
+    rdfs:label "Prompt Engineering" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Python a grn:Skill ;
+    rdfs:label "Python" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Pytorch a grn:Framework,
+        grn:Skill ;
+    rdfs:label "Pytorch" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "arxiv",
+        "huggingface",
+        "static" .
+
+grn_data:R a grn:Skill ;
+    rdfs:label "R" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "huggingface",
+        "jobs",
+        "static" .
+
+grn_data:Rag a grn:Skill ;
+    rdfs:label "Rag" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Random_Forest a grn:Skill ;
+    rdfs:label "Random Forest" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Rdf a grn:Skill ;
+    rdfs:label "Rdf" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Recommender_Systems a grn:Domain ;
+    rdfs:label "Recommender Systems" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv" .
+
+grn_data:Reinforcement_Learning a grn:Domain,
+        grn:Skill ;
+    rdfs:label "Reinforcement Learning" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Remote a grn:Location ;
+    rdfs:label "Remote" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Research_Scientist a grn:Role ;
+    rdfs:label "Research Scientist" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Rl a grn:Domain ;
+    rdfs:label "Rl" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Robotics a grn:Domain ;
+    rdfs:label "Robotics" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_101000_101000 a grn:Entity ;
+    rdfs:label "Salary_101000_101000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "101000"^^xsd:float ;
+    grn:min "101000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_104000_135000 a grn:Entity ;
+    rdfs:label "Salary_104000_135000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "135000"^^xsd:float ;
+    grn:min "104000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_111000_111000 a grn:Entity ;
+    rdfs:label "Salary_111000_111000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "111000"^^xsd:float ;
+    grn:min "111000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_117000_117000 a grn:Entity ;
+    rdfs:label "Salary_117000_117000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "117000"^^xsd:float ;
+    grn:min "117000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_117000_130000 a grn:Entity ;
+    rdfs:label "Salary_117000_130000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "130000"^^xsd:float ;
+    grn:min "117000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_117000_161000 a grn:Entity ;
+    rdfs:label "Salary_117000_161000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "161000"^^xsd:float ;
+    grn:min "117000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_117000_169000 a grn:Entity ;
+    rdfs:label "Salary_117000_169000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "169000"^^xsd:float ;
+    grn:min "117000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_120000_200000 a grn:Entity ;
+    rdfs:label "Salary_120000_200000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "200000"^^xsd:float ;
+    grn:min "120000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_143000_169000 a grn:Entity ;
+    rdfs:label "Salary_143000_169000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "169000"^^xsd:float ;
+    grn:min "143000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_182000_195000 a grn:Entity ;
+    rdfs:label "Salary_182000_195000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "195000"^^xsd:float ;
+    grn:min "182000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_182000_208000 a grn:Entity ;
+    rdfs:label "Salary_182000_208000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "208000"^^xsd:float ;
+    grn:min "182000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_25000_45000 a grn:Entity ;
+    rdfs:label "Salary_25000_45000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "45000"^^xsd:float ;
+    grn:min "25000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_26000_26000 a grn:Entity ;
+    rdfs:label "Salary_26000_26000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "26000"^^xsd:float ;
+    grn:min "26000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_30000_45000 a grn:Entity ;
+    rdfs:label "Salary_30000_45000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "45000"^^xsd:float ;
+    grn:min "30000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_35000_35000 a grn:Entity ;
+    rdfs:label "Salary_35000_35000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "35000"^^xsd:float ;
+    grn:min "35000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_35000_55000 a grn:Entity ;
+    rdfs:label "Salary_35000_55000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "55000"^^xsd:float ;
+    grn:min "35000"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Salary_36000_36000 a grn:Entity ;
+    rdfs:label "Salary_36000_36000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "36000"^^xsd:float ;
+    grn:min "36000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_41000_41000 a grn:Entity ;
+    rdfs:label "Salary_41000_41000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "41000"^^xsd:float ;
+    grn:min "41000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_45000_45000 a grn:Entity ;
+    rdfs:label "Salary_45000_45000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "45000"^^xsd:float ;
+    grn:min "45000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_45000_60000 a grn:Entity ;
+    rdfs:label "Salary_45000_60000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "60000"^^xsd:float ;
+    grn:min "45000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_46000_46000 a grn:Entity ;
+    rdfs:label "Salary_46000_46000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "46000"^^xsd:float ;
+    grn:min "46000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_48000_132000 a grn:Entity ;
+    rdfs:label "Salary_48000_132000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "132000"^^xsd:float ;
+    grn:min "48000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_48000_48000 a grn:Entity ;
+    rdfs:label "Salary_48000_48000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "48000"^^xsd:float ;
+    grn:min "48000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_50000_100000 a grn:Entity ;
+    rdfs:label "Salary_50000_100000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "100000"^^xsd:float ;
+    grn:min "50000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_50000_50000 a grn:Entity ;
+    rdfs:label "Salary_50000_50000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "50000"^^xsd:float ;
+    grn:min "50000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_55000_90000 a grn:Entity ;
+    rdfs:label "Salary_55000_90000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "90000"^^xsd:float ;
+    grn:min "55000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_57000_57000 a grn:Entity ;
+    rdfs:label "Salary_57000_57000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "57000"^^xsd:float ;
+    grn:min "57000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_60000_60000 a grn:Entity ;
+    rdfs:label "Salary_60000_60000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "60000"^^xsd:float ;
+    grn:min "60000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_60000_90000 a grn:Entity ;
+    rdfs:label "Salary_60000_90000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "90000"^^xsd:float ;
+    grn:min "60000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_61000_61000 a grn:Entity ;
+    rdfs:label "Salary_61000_61000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "61000"^^xsd:float ;
+    grn:min "61000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_62000_62000 a grn:Entity ;
+    rdfs:label "Salary_62000_62000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "62000"^^xsd:float ;
+    grn:min "62000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_63000_63000 a grn:Entity ;
+    rdfs:label "Salary_63000_63000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "63000"^^xsd:float ;
+    grn:min "63000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_64000_64000 a grn:Entity ;
+    rdfs:label "Salary_64000_64000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "64000"^^xsd:float ;
+    grn:min "64000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_65000_65000 a grn:Entity ;
+    rdfs:label "Salary_65000_65000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "65000"^^xsd:float ;
+    grn:min "65000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_66000_66000 a grn:Entity ;
+    rdfs:label "Salary_66000_66000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "66000"^^xsd:float ;
+    grn:min "66000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_67000_67000 a grn:Entity ;
+    rdfs:label "Salary_67000_67000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "67000"^^xsd:float ;
+    grn:min "67000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_68000_68000 a grn:Entity ;
+    rdfs:label "Salary_68000_68000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "68000"^^xsd:float ;
+    grn:min "68000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_69000_69000 a grn:Entity ;
+    rdfs:label "Salary_69000_69000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "69000"^^xsd:float ;
+    grn:min "69000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_70000_70000 a grn:Entity ;
+    rdfs:label "Salary_70000_70000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "70000"^^xsd:float ;
+    grn:min "70000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_70000_90000 a grn:Entity ;
+    rdfs:label "Salary_70000_90000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "90000"^^xsd:float ;
+    grn:min "70000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_71000_71000 a grn:Entity ;
+    rdfs:label "Salary_71000_71000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "71000"^^xsd:float ;
+    grn:min "71000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_73000_73000 a grn:Entity ;
+    rdfs:label "Salary_73000_73000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "73000"^^xsd:float ;
+    grn:min "73000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_76000_76000 a grn:Entity ;
+    rdfs:label "Salary_76000_76000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "76000"^^xsd:float ;
+    grn:min "76000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_79000_79000 a grn:Entity ;
+    rdfs:label "Salary_79000_79000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "79000"^^xsd:float ;
+    grn:min "79000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_80000_130000 a grn:Entity ;
+    rdfs:label "Salary_80000_130000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "130000"^^xsd:float ;
+    grn:min "80000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_80000_160000 a grn:Entity ;
+    rdfs:label "Salary_80000_160000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "160000"^^xsd:float ;
+    grn:min "80000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_80000_80000 a grn:Entity ;
+    rdfs:label "Salary_80000_80000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "80000"^^xsd:float ;
+    grn:min "80000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_81000_81000 a grn:Entity ;
+    rdfs:label "Salary_81000_81000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "81000"^^xsd:float ;
+    grn:min "81000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_82000_82000 a grn:Entity ;
+    rdfs:label "Salary_82000_82000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "82000"^^xsd:float ;
+    grn:min "82000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_83000_83000 a grn:Entity ;
+    rdfs:label "Salary_83000_83000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "83000"^^xsd:float ;
+    grn:min "83000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_87000_87000 a grn:Entity ;
+    rdfs:label "Salary_87000_87000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "87000"^^xsd:float ;
+    grn:min "87000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_88000_88000 a grn:Entity ;
+    rdfs:label "Salary_88000_88000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "88000"^^xsd:float ;
+    grn:min "88000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_90000_90000 a grn:Entity ;
+    rdfs:label "Salary_90000_90000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "90000"^^xsd:float ;
+    grn:min "90000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_96000_107000 a grn:Entity ;
+    rdfs:label "Salary_96000_107000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "107000"^^xsd:float ;
+    grn:min "96000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Salary_96000_96000 a grn:Entity ;
+    rdfs:label "Salary_96000_96000" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:max "96000"^^xsd:float ;
+    grn:min "96000"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:San_Francisco a grn:Location ;
+    rdfs:label "San Francisco" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "jobs" .
+
+grn_data:Scala a grn:Skill ;
+    rdfs:label "Scala" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs" .
+
+grn_data:Scikit_Learn a grn:Library,
+        grn:Skill ;
+    rdfs:label "Scikit-Learn" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Scipy a grn:Skill ;
+    rdfs:label "Scipy" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Seaborn a grn:Skill ;
+    rdfs:label "Seaborn" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Senior_Ml_Engineer a grn:Role ;
+    rdfs:label "Senior Ml Engineer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Spacy a grn:Library ;
+    rdfs:label "Spacy" ;
+    grn:confidence "0.95"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Sparql a grn:Skill ;
+    rdfs:label "Sparql" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "static" .
+
+grn_data:Statistics a grn:Skill ;
+    rdfs:label "Statistics" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Supervised_Learning a grn:Skill ;
+    rdfs:label "Supervised Learning" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Tensorflow a grn:Framework,
+        grn:Skill ;
+    rdfs:label "Tensorflow" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Transfer_Learning a grn:Skill ;
+    rdfs:label "Transfer Learning" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv" .
+
+grn_data:Transformer a grn:Skill ;
+    rdfs:label "Transformer" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "huggingface",
+        "static" .
+
+grn_data:Transformers a grn:Library,
+        grn:Skill ;
+    rdfs:label "Transformers" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "huggingface",
+        "static" .
+
+grn_data:Uk a grn:Location ;
+    rdfs:label "Uk" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs",
+        "static" .
+
+grn_data:Unsupervised_Learning a grn:Skill ;
+    rdfs:label "Unsupervised Learning" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Us a grn:Location ;
+    rdfs:label "Us" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "arxiv",
+        "huggingface",
+        "jobs",
+        "static" .
+
+grn_data:Usa a grn:Location ;
+    rdfs:label "Usa" ;
+    grn:confidence "0.8"^^xsd:float ;
+    grn:source "arxiv",
+        "jobs" .
+
+grn_data:Vector_Database a grn:Skill ;
+    rdfs:label "Vector Database" ;
+    grn:confidence "0.9"^^xsd:float ;
+    grn:source "arxiv",
+        "static" .
+
+grn_data:Xgboost a grn:Library,
+        grn:Skill ;
+    rdfs:label "Xgboost" ;
+    grn:confidence "0.9"^^xsd:float,
+        "0.95"^^xsd:float ;
+    grn:source "static" .
+
