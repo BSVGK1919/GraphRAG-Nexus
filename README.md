@@ -154,17 +154,11 @@ OLLAMA_BASE_URL=http://graphrag_ollama:11434
 - EC2 EBS volumes can be expanded live using `growpart` + `resize2fs` without instance restart
 - Neo4j Aura Free uses the instance ID as the database name, not `neo4j`
 
----
 
-## Part of the CogniSutra Ecosystem
-
-GraphRAG-Nexus v2 is the intelligence backbone powering **SMARTGrade Nexus** — an AI-native EdTech platform that takes learners from zero to job-ready through adaptive learning, portfolio building, and verified career readiness scoring.
-
-- SMARTGrade Nexus → [smartgradenexus.com](https://smartgradenexus.com)
 
 ---
 
 ## Author
 
 **Sai Venkata Gopala Krishna Bubathula**
-[GitHub](https://github.com/BSVGK1919) · [LinkedIn](https://linkedin.com/in/bsvgk1919) · [Hugging Face](https://huggingface.co/BSVGK1919)
+[GitHub](https://github.com/BSVGK1919) · [LinkedIn](https://www.linkedin.com/in/sai-venkata-gopala-krishna-bubathula-a05a26283/) · [Hugging Face](https://huggingface.co/BSVGK)
